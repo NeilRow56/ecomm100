@@ -1,13 +1,12 @@
 import React from 'react';
-import Home from '../components/Home';
+import About from '../components/About';
+
 import Layout from '../components/Layout';
 
-export default function About() {
+export default function AboutPage() {
 	return (
-		<Layout>
-			<div className="flex-1 h-screen w-full  pt-5 bg-pink-100">
-				<Home />
-			</div>
+		<Layout title="About amazona">
+			<About />
 		</Layout>
 	);
 }
