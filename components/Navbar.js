@@ -11,8 +11,8 @@ const Navbar = ({ search, setSearch }) => {
 		{ name: 'Blog Post', link: '/post' },
 	];
 	return (
-		<div className="fixed top-0 flex flex-col md:flex-row w-full h-[60px]  items-center bg-blue-800">
-			<div className="flex flex-row text-center  text-white text-3xl w-full justify-center md:justify-start  xl:pl-[200px] md:pl[10px] py-[1px] bg-blue-800">
+		<div className="fixed top-0 flex flex-col md:flex-row w-full h-[60px]  items-center bg-blue-800 z-40">
+			<div className="flex flex-row text-center  text-white text-3xl w-full justify-center md:justify-start  xl:pl-[100px] md:pl[10px] py-[1px] bg-blue-800 z-30">
 				<h2
 					className="md:text-3xl ml-3 
 					font-bold
@@ -51,7 +51,7 @@ const Navbar = ({ search, setSearch }) => {
 				</form> */}
 			</div>
 			<div className="flex flex-col w-full  bg-blue-800">
-				<ul className="flex flex-row pt-1 pb-1    justify-center md:justify-end md:mr-[50px] xl:mr-[200px]">
+				<ul className="flex flex-row pt-1 pb-1    justify-center md:justify-end md:mr-[50px] xl:mr-[100px]">
 					{Links.map((link) => (
 						<li key={link.name}>
 							<Link href={link.link}>
