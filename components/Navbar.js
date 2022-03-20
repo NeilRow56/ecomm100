@@ -6,22 +6,24 @@ const Navbar = ({ search, setSearch }) => {
 	const router = useRouter();
 
 	let Links = [
-		{ name: 'Home', link: '/' },
+		{ name: 'Login', link: '/loginScreen' },
 		{ name: 'About', link: '/about' },
-		{ name: 'Blog Post', link: '/post' },
+		{ name: 'Cart', link: '/cartScreen' },
 	];
 	return (
 		<div className="fixed top-0 flex flex-col md:flex-row w-full h-[60px]  items-center bg-blue-800 z-40">
 			<div className="flex flex-row text-center  text-white text-3xl w-full justify-center md:justify-start  xl:pl-[100px] md:pl[10px] py-[1px] bg-blue-800 z-30">
-				<h2
-					className="md:text-3xl ml-3 
+				<Link href="/">
+					<a
+						className="md:text-3xl ml-3 
 					font-bold
 					
                     
                     "
-				>
-					amazona
-				</h2>
+					>
+						amazona
+					</a>
+				</Link>
 				{/* <form
 					className="form-group flex-row  pl-2 sm:pl-5 "
 					onSubmit={(e) => e.preventDefault()}

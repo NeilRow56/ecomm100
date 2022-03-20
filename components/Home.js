@@ -9,7 +9,7 @@ const Home = () => {
 			<h1 className="text-3xl xl:ml-20 pb-5 ml-3 font-semibold">
 				Products
 			</h1>
-			<div className="grid lg:grid-cols-3  md:grid-cols-2 grid-cols-1 gap-6">
+			<div className="grid lg:grid-cols-3  md:grid-cols-2 grid-cols-1 gap-10">
 				{data.products.map((product) => (
 					<div key={product.name}>
 						<div className="flex justify-center">
@@ -18,8 +18,8 @@ const Home = () => {
 									<a>
 										<Image
 											className="rounded-t-lg"
-											width={350}
-											height={350}
+											width={375}
+											height={375}
 											src={product.image}
 											alt=""
 										/>
