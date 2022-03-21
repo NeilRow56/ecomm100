@@ -36,32 +36,32 @@ export default function ProductScreen() {
 						src={product.image}
 						alt="{product.name}"
 					/>
-					<div className="p-6 flex flex-col 2xl:flex-row justify-start">
+					<div className="p-6 flex flex-col 2xl:flex-row justify-start dark:bg-gray-700 dark:text-white text-gray-900">
 						<div className="flex-col min-w-[350px]  max-w-[640px] px-5 pb-5">
-							<h1 className="text-gray-900 lg:text-3xl text-2xl font-medium mb-5 mt-5">
+							<h1 className=" lg:text-3xl text-2xl font-medium mb-5 mt-5">
 								{product.name}
 							</h1>
-							<h5 className="text-gray-900 text-xl font-medium mb-2">
+							<h5 className=" text-xl font-medium mb-2">
 								Category: {product.category}
 							</h5>
-							<h5 className="text-gray-900 text-xl font-medium mb-2">
+							<h5 className=" text-xl font-medium mb-2">
 								Brand: {product.brand}
 							</h5>
-							<h5 className="text-gray-900 text-xl font-medium mb-2">
+							<h5 className=" text-xl font-medium mb-2">
 								Rating: {product.rating} stars (
 								{product.numReviews} reviews)
 							</h5>
-							<p className="text-gray-600 text-xl">
+							<p className="text-gray-600 dark:text-white opacity-75 text-xl">
 								Descrition: {product.description}
 							</p>
 						</div>
 						<div className="flex flex-col ">
 							<div className="border border-gray-200 rounded-md ">
 								<div className=" flex space-x-1 flex-row min-w-[350px] max-w-[640px] pl-5 ">
-									<div className="text-gray-900 text-xl font-medium mb-2">
+									<div className=" text-xl font-medium mb-2">
 										<h2 className="text-2xl">Price £</h2>
 									</div>
-									<div className="text-gray-900 text-xl font-medium mb-2">
+									<div className=" text-xl font-medium mb-2">
 										<h2 className="text-2xl">
 											{product.price}
 										</h2>
@@ -69,10 +69,10 @@ export default function ProductScreen() {
 								</div>
 								<div className="flex flex-col ">
 									<div className=" flex space-x-1  min-w-[350px] max-w-[640px] pl-5 ">
-										<div className="text-gray-900 flex flex-row text-xl font-medium mb-2">
+										<div className=" flex flex-row text-xl font-medium mb-2">
 											<h2 className="text-xl">Status:</h2>
 										</div>
-										<div className="text-gray-900 text-xl font-medium mb-2">
+										<div className=" text-xl font-medium mb-2">
 											<h2 className="text-xl">
 												{product.countInStock > 0
 													? 'InStock'
