@@ -13,7 +13,7 @@ const Home = () => {
 				{data.products.map((product) => (
 					<div key={product.name}>
 						<div className="flex justify-center">
-							<div className="rounded-lg shadow-lg bg-white max-w-sm">
+							<div className="rounded-lg shadow-lg bg-white dark:bg-black text-black dark:text-white max-w-sm">
 								<Link
 									href={`/product/${product.slug}`}
 									passHref
@@ -28,12 +28,12 @@ const Home = () => {
 										/>
 									</a>
 								</Link>
-								<div className="p-6 items-center">
-									<h5 className="text-gray-900 text-xl font-medium mb-2">
+								<div className="p-6 items-center  ">
+									<h5 className="  text-xl font-medium mb-2">
 										{product.name}
 									</h5>
 									<div className="flex items-center">
-										<div className="text-gray-700  text-base mb-4">
+										<div className="  text-base mb-4">
 											<h2 className="text-sm font-bold mr-10 mt-5">
 												£ {product.price}
 											</h2>
