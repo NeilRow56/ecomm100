@@ -6,7 +6,7 @@ import data from '../utils/data';
 const Home = () => {
 	return (
 		<div className="container mx-auto   mb-5">
-			<h1 className="text-3xl xl:ml-20 pb-5 ml-3 font-semibold">
+			<h1 className="text-3xl xl:ml-20 pb-5 ml-3 font-semibold text-orange-400">
 				Products
 			</h1>
 			<div className="grid lg:grid-cols-3  md:grid-cols-2 grid-cols-1 gap-10">
@@ -14,7 +14,10 @@ const Home = () => {
 					<div key={product.name}>
 						<div className="flex justify-center">
 							<div className="rounded-lg shadow-lg bg-white max-w-sm">
-								<Link href="/">
+								<Link
+									href={`/product/${product.slug}`}
+									passHref
+								>
 									<a>
 										<Image
 											className="rounded-t-lg"
@@ -37,7 +40,7 @@ const Home = () => {
 										</div>
 										<button
 											type="button"
-											className=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-900 hover:shadow-lg focus:bg-blue-900 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-900 active:shadow-lg transition duration-150 ease-in-out"
+											className=" inline-block px-6 py-2.5 bg-orange-400 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-900 hover:shadow-lg focus:bg-blue-900 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-900 active:shadow-lg transition duration-150 ease-in-out"
 										>
 											ADD TO CART
 										</button>
