@@ -1,16 +1,15 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import data from '../utils/data';
 
-const Home = () => {
+const Home = ({ products }) => {
 	return (
 		<div className="container mx-auto   mb-5">
 			<h1 className="text-3xl xl:ml-20 pb-5 ml-3 font-semibold text-orange-400">
 				Products
 			</h1>
 			<div className="grid lg:grid-cols-3  md:grid-cols-2 grid-cols-1 gap-10">
-				{data.products.map((product) => (
+				{products.map((product) => (
 					<div key={product.name}>
 						<div className="flex justify-center">
 							<div className="rounded-lg shadow-lg bg-white dark:bg-black text-black dark:text-white max-w-sm">

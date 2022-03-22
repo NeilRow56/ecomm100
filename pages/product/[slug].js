@@ -1,14 +1,14 @@
 import React from 'react';
-import { useRouter } from 'next/router';
+
 import Layout from '../../components/Layout';
-import data from '../../utils/data';
+
+import db from '../../utils/db';
+import Product from '../../models/Product';
 import Link from 'next/link';
 import Image from 'next/image';
 
-export default function ProductScreen() {
-	const router = useRouter();
-	const { slug } = router.query;
-	const product = data.products.find((a) => a.slug === slug);
+export default function ProductScreen(props) {
+	const { product } = props;
 
 	if (!product) {
 		return (
@@ -96,4 +96,17 @@ export default function ProductScreen() {
 			</div>
 		</Layout>
 	);
+}
+
+export async function getServerSideProps(context) {
+	const { params } = context;
+	const { slug } = params;
+	await db.connect();
+	const product = await Product.findOne({ slug }).lean();
+	await db.disconnect();
+	return {
+		props: {
+			product: db.convertDocToObj(product),
+		},
+	};
 }
